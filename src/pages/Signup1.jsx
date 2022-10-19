@@ -1,29 +1,28 @@
 import { Avatar, Grid, TextField, Typography, Button } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import { Box, Container, flexbox } from "@mui/system";
+import { Box, Container } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 import { lightBlue } from "@mui/material/colors";
 
-// sx ={자바스크립트{객체}}
-export default function Signup4() {
+export default function Signup1() {
   return (
-    <Container component="main" maxwidth="xs">
+    <Container component="main" maxWidth="xs">
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
+          alignitems: "center",
           justifyContent: "center",
-          height: "60vh",
+          height: "80vh",
         }}
       >
-        <Avatar sx={{ m: 3, bgcolor: lightBlue[900] }}>#</Avatar>
+        <Avatar sx={{ m: 3, bgcolor: "primary.main" }}>🤦‍♂️</Avatar>
         <Typography component="h1" variant="h5">
           회원가입
         </Typography>
         <Box component="form" noValidate sx={{ mt: 3 }}>
-          <Grid container spacing={6}>
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
                 name="email"
@@ -49,18 +48,11 @@ export default function Signup4() {
                 required
                 fullWidth
                 label="비밀번호 확인"
-                autoComplete="off"
                 type="password"
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                name="nickname"
-                required
-                fullWidth
-                label="닉네임"
-                autoComplete="off"
-              />
+              <TextField name="nickname" required fullWidth label="닉네임" />
             </Grid>
           </Grid>
           <LoadingButton
