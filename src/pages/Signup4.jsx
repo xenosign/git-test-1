@@ -18,7 +18,7 @@ export default function Signup4() {
           height: "60vh",
         }}
       >
-        <Avatar sx={{ m: 3, bgcolor: lightBlue[300] }}>#</Avatar>
+        <Avatar sx={{ m: 3, bgcolor: lightBlue[900] }}>#</Avatar>
         <Typography component="h1" variant="h5">
           회원가입
         </Typography>
