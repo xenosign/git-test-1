@@ -1,29 +1,31 @@
 import { Avatar, Grid, TextField, Typography, Button } from "@mui/material";
-import { LoadingButton } from "@mui/lab";
-import { Box, Container, flexbox } from "@mui/system";
+import LoadingButton from "@mui/lab/LoadingButton";
+import { Box, Container } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { lightBlue } from "@mui/material/colors";
 
-// sx ={자바스크립트{객체}}
-export default function Signup4() {
+export default function Signup2() {
   return (
-    <Container component="main" maxwidth="xs">
+    <Container component="main" maxWidth="xs">
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
+          height: "60vh",
           alignItems: "center",
           justifyContent: "center",
-          height: "60vh",
         }}
       >
-        <Avatar sx={{ m: 3, bgcolor: lightBlue[900] }}>#</Avatar>
+        <Avatar sx={{ m: 3, bgcolor: lightBlue[200] }}>#</Avatar>
+        {/* component 태그의 값 variant 크기의 값 */}
         <Typography component="h1" variant="h5">
           회원가입
         </Typography>
         <Box component="form" noValidate sx={{ mt: 3 }}>
-          <Grid container spacing={6}>
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
                 name="email"
@@ -45,22 +47,15 @@ export default function Signup4() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                name="confirmPassword"
+                name="confirmPasswordpassword"
                 required
                 fullWidth
-                label="비밀번호 확인"
-                autoComplete="off"
+                label="비밀번호확인"
                 type="password"
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                name="nickname"
-                required
-                fullWidth
-                label="닉네임"
-                autoComplete="off"
-              />
+              <TextField name="nickname" required fullWidth label="닉네임" />
             </Grid>
           </Grid>
           <LoadingButton
@@ -72,9 +67,7 @@ export default function Signup4() {
             회원 가입
           </LoadingButton>
           <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link to="/login">이미 계정이 있나요? 로그인으로 이동</Link>
-            </Grid>
+            <Link to="/login"> 이미 계정이 있나요? 로그인으로 이동 </Link>
           </Grid>
         </Box>
       </Box>
