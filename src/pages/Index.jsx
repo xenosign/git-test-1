@@ -15,6 +15,7 @@ export default function Index() {
   return (
     <Main>
       <Header />
+      <Header />
       <MyImg src="https://i1.sndcdn.com/avatars-uubmOX0QQigzrI2m-5wHwlA-t240x240.jpg" />
       <Footer />
     </Main>
